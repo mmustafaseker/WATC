@@ -30,6 +30,7 @@ namespace ChampData
         [Range(0, 255)]
         public string BLue { get; set; }
 
+        public virtual ICollection<Team> Teams { get; set; }
 
         public override string ToString()
         {

@@ -65,10 +65,55 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="macDuzenleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="macDuzenleForm.Designer.cs">
+      <DependentUpon>macDuzenleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="macOlusturForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="macOlusturForm.Designer.cs">
+      <DependentUpon>macOlusturForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OyuncuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OyuncuForm.Designer.cs">
+      <DependentUpon>OyuncuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenkleForm.Designer.cs">
+      <DependentUpon>RenkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="takimlarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="takimlarForm.Designer.cs">
+      <DependentUpon>takimlarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakimOyunculariForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakimOyunculariForm.Designer.cs">
+      <DependentUpon>TakimOyunculariForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="macDuzenleForm.resx">
+      <DependentUpon>macDuzenleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="macOlusturForm.resx">
+      <DependentUpon>macOlusturForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OyuncuForm.resx">
+      <DependentUpon>OyuncuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +124,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RenkleForm.resx">
+      <DependentUpon>RenkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="takimlarForm.resx">
+      <DependentUpon>takimlarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakimOyunculariForm.resx">
+      <DependentUpon>TakimOyunculariForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

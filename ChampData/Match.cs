@@ -15,7 +15,7 @@ namespace ChampData
 
 
         [Required]
-        public DateTime MatchTime { get; set; }
+        public DateTime? MatchTime { get; set; }
 
 
 
