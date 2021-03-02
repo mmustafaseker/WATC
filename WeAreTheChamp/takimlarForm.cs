@@ -26,8 +26,8 @@ namespace WeAreTheChamp
 
         private void TakımlarıGöster()
         {
-            lbRenkler.DataSource = null;
-            lbRenkler.DataSource = db.Teams.Where(x => x.TeamName != "Belirtilmemiş").ToList();
+            lbTakimlar.DataSource = null;
+            lbTakimlar.DataSource = db.Teams.Where(x => x.TeamName != "Belirtilmemiş").ToList();
         }
 
         private void btnTakımOlustur_Click(object sender, EventArgs e)
@@ -65,7 +65,10 @@ namespace WeAreTheChamp
 
         private void FormuTemizle()
         {
-            
+            lbRenkler.Enabled = false;
+            cboRenk.Enabled = false;
+            btnRenkEkle.Enabled = false;
+            btnSil.Enabled = false;
             btnTakımOlustur.Text = "Takım Oluştur";
             txtTakimAdi.Clear();
             lbRenkler.DataSource = null;
@@ -82,6 +85,11 @@ namespace WeAreTheChamp
             FormuTemizle();
             if (lbTakimlar.SelectedItem != null)
             {
+                lbTakimlar.Enabled = false;
+                lbRenkler.Enabled = true;
+                cboRenk.Enabled = true;
+                btnRenkEkle.Enabled = true;
+                btnSil.Enabled = true;
                 btnTakımOlustur.Text = "Takım Düzenle";
                 takımDuzenle = (Team)lbTakimlar.SelectedItem;
                 txtTakimAdi.Text = takımDuzenle.TeamName;
@@ -95,6 +103,7 @@ namespace WeAreTheChamp
             {
                 lbRenkler.Items.RemoveAt(i);
             }
+            lbTakimlar.Enabled = true;
         }
 
         private void btnSil_Click(object sender, EventArgs e)

@@ -45,6 +45,8 @@ namespace WeAreTheChamp
             this.label3 = new System.Windows.Forms.Label();
             this.txtRenkAdi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnDuzenle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBlue)).BeginInit();
@@ -108,6 +110,7 @@ namespace WeAreTheChamp
             this.btnIptal.Text = "İPTAL";
             this.btnIptal.UseVisualStyleBackColor = true;
             this.btnIptal.Visible = false;
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // btnAddColor
             // 
@@ -117,6 +120,7 @@ namespace WeAreTheChamp
             this.btnAddColor.TabIndex = 13;
             this.btnAddColor.Text = "OLUŞTUR";
             this.btnAddColor.UseVisualStyleBackColor = true;
+            this.btnAddColor.Click += new System.EventHandler(this.btnAddColor_Click);
             // 
             // label6
             // 
@@ -189,6 +193,7 @@ namespace WeAreTheChamp
             this.nudRed.Name = "nudRed";
             this.nudRed.Size = new System.Drawing.Size(120, 20);
             this.nudRed.TabIndex = 6;
+            this.nudRed.ValueChanged += new System.EventHandler(this.nudRed_ValueChanged);
             // 
             // label3
             // 
@@ -215,11 +220,33 @@ namespace WeAreTheChamp
             this.label7.TabIndex = 3;
             this.label7.Text = "Renk Adı :";
             // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.Location = new System.Drawing.Point(15, 334);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(75, 23);
+            this.btnDuzenle.TabIndex = 4;
+            this.btnDuzenle.Text = "Düzenle";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(113, 334);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 6;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
             // RenkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 337);
+            this.ClientSize = new System.Drawing.Size(566, 378);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnDuzenle);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbRenkler);
             this.Controls.Add(this.label2);
@@ -255,5 +282,7 @@ namespace WeAreTheChamp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRenkAdi;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDuzenle;
+        private System.Windows.Forms.Button btnSil;
     }
 }

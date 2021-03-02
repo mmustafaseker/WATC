@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202102271552259_Ilk.designer.cs">
       <DependentUpon>202102271552259_Ilk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103021826305_color.cs" />
+    <Compile Include="Migrations\202103021826305_color.designer.cs">
+      <DependentUpon>202103021826305_color.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +75,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202102271552259_Ilk.resx">
       <DependentUpon>202102271552259_Ilk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103021826305_color.resx">
+      <DependentUpon>202103021826305_color.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

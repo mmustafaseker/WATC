@@ -88,6 +88,7 @@ namespace WeAreTheChamp
             this.btnCancel.TabIndex = 48;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEditMatch
             // 
@@ -98,6 +99,7 @@ namespace WeAreTheChamp
             this.btnEditMatch.TabIndex = 47;
             this.btnEditMatch.Text = "OLUŞTUR";
             this.btnEditMatch.UseVisualStyleBackColor = true;
+            this.btnEditMatch.Click += new System.EventHandler(this.btnEditMatch_Click);
             // 
             // label9
             // 

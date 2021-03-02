@@ -32,16 +32,18 @@ namespace WeAreTheChamp
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtOyuncuAdi = new System.Windows.Forms.TextBox();
-            this.cboTakimlar = new System.Windows.Forms.ComboBox();
-            this.dgvOyuncular = new System.Windows.Forms.DataGridView();
-            this.btnOlustur = new System.Windows.Forms.Button();
             this.btnIptal = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOlustur = new System.Windows.Forms.Button();
+            this.cboTakimlar = new System.Windows.Forms.ComboBox();
+            this.txtOyuncuAdi = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgvOyuncular = new System.Windows.Forms.DataGridView();
             this.PlayerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Team = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtAra = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOyuncular)).BeginInit();
             this.SuspendLayout();
@@ -79,21 +81,24 @@ namespace WeAreTheChamp
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Yaratıcı";
             // 
-            // label3
+            // btnIptal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Oyuncu Adi :";
+            this.btnIptal.Location = new System.Drawing.Point(160, 119);
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(75, 23);
+            this.btnIptal.TabIndex = 3;
+            this.btnIptal.Text = "İPTAL";
+            this.btnIptal.UseVisualStyleBackColor = true;
             // 
-            // txtOyuncuAdi
+            // btnOlustur
             // 
-            this.txtOyuncuAdi.Location = new System.Drawing.Point(81, 38);
-            this.txtOyuncuAdi.Name = "txtOyuncuAdi";
-            this.txtOyuncuAdi.Size = new System.Drawing.Size(165, 20);
-            this.txtOyuncuAdi.TabIndex = 1;
+            this.btnOlustur.Location = new System.Drawing.Point(22, 119);
+            this.btnOlustur.Name = "btnOlustur";
+            this.btnOlustur.Size = new System.Drawing.Size(75, 23);
+            this.btnOlustur.TabIndex = 3;
+            this.btnOlustur.Text = "OLUŞTUR";
+            this.btnOlustur.UseVisualStyleBackColor = true;
+            this.btnOlustur.Click += new System.EventHandler(this.btnOlustur_Click);
             // 
             // cboTakimlar
             // 
@@ -103,6 +108,22 @@ namespace WeAreTheChamp
             this.cboTakimlar.Name = "cboTakimlar";
             this.cboTakimlar.Size = new System.Drawing.Size(168, 21);
             this.cboTakimlar.TabIndex = 2;
+            // 
+            // txtOyuncuAdi
+            // 
+            this.txtOyuncuAdi.Location = new System.Drawing.Point(81, 38);
+            this.txtOyuncuAdi.Name = "txtOyuncuAdi";
+            this.txtOyuncuAdi.Size = new System.Drawing.Size(165, 20);
+            this.txtOyuncuAdi.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Oyuncu Adi :";
             // 
             // dgvOyuncular
             // 
@@ -121,23 +142,19 @@ namespace WeAreTheChamp
             this.dgvOyuncular.Size = new System.Drawing.Size(307, 289);
             this.dgvOyuncular.TabIndex = 2;
             // 
-            // btnOlustur
+            // PlayerName
             // 
-            this.btnOlustur.Location = new System.Drawing.Point(22, 119);
-            this.btnOlustur.Name = "btnOlustur";
-            this.btnOlustur.Size = new System.Drawing.Size(75, 23);
-            this.btnOlustur.TabIndex = 3;
-            this.btnOlustur.Text = "OLUŞTUR";
-            this.btnOlustur.UseVisualStyleBackColor = true;
+            this.PlayerName.DataPropertyName = "PlayerName";
+            this.PlayerName.HeaderText = "Oyuncu Adi";
+            this.PlayerName.Name = "PlayerName";
+            this.PlayerName.ReadOnly = true;
             // 
-            // btnIptal
+            // Team
             // 
-            this.btnIptal.Location = new System.Drawing.Point(160, 119);
-            this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(75, 23);
-            this.btnIptal.TabIndex = 3;
-            this.btnIptal.Text = "İPTAL";
-            this.btnIptal.UseVisualStyleBackColor = true;
+            this.Team.DataPropertyName = "Team";
+            this.Team.HeaderText = "Takımı";
+            this.Team.Name = "Team";
+            this.Team.ReadOnly = true;
             // 
             // btnSil
             // 
@@ -156,24 +173,32 @@ namespace WeAreTheChamp
             this.button2.TabIndex = 3;
             this.button2.Text = "Seçiliyi DÜZENLE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // PlayerName
+            // txtAra
             // 
-            this.PlayerName.HeaderText = "Oyuncu Adi";
-            this.PlayerName.Name = "PlayerName";
-            this.PlayerName.ReadOnly = true;
+            this.txtAra.Location = new System.Drawing.Point(89, 252);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(178, 20);
+            this.txtAra.TabIndex = 4;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             // 
-            // Team
+            // label4
             // 
-            this.Team.HeaderText = "Takımı";
-            this.Team.Name = "Team";
-            this.Team.ReadOnly = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(57, 255);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Ara:";
             // 
             // OyuncuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 382);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtAra);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dgvOyuncular);
@@ -204,5 +229,7 @@ namespace WeAreTheChamp
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Team;
+        private System.Windows.Forms.TextBox txtAra;
+        private System.Windows.Forms.Label label4;
     }
 }

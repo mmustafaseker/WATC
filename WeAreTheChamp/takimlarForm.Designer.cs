@@ -122,7 +122,6 @@ namespace WeAreTheChamp
             // 
             // btnDeleteColor
             // 
-            this.btnDeleteColor.Enabled = false;
             this.btnDeleteColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteColor.Location = new System.Drawing.Point(136, 92);
             this.btnDeleteColor.Name = "btnDeleteColor";
@@ -134,7 +133,6 @@ namespace WeAreTheChamp
             // 
             // btnRenkEkle
             // 
-            this.btnRenkEkle.Enabled = false;
             this.btnRenkEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRenkEkle.Location = new System.Drawing.Point(223, 63);
             this.btnRenkEkle.Name = "btnRenkEkle";
@@ -146,7 +144,6 @@ namespace WeAreTheChamp
             // 
             // cboRenk
             // 
-            this.cboRenk.Enabled = false;
             this.cboRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRenk.FormattingEnabled = true;
             this.cboRenk.Location = new System.Drawing.Point(137, 65);

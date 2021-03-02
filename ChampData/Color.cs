@@ -19,16 +19,16 @@ namespace ChampData
 
         [Required]
         [Range(0, 255)]
-        public string Red { get; set; }
+        public int Red { get; set; }
 
         [Required]
         [Range(0, 255)]
-        public string Green { get; set; }
+        public int Green { get; set; }
 
 
         [Required]
         [Range(0, 255)]
-        public string BLue { get; set; }
+        public int BLue { get; set; }
 
         public virtual ICollection<Team> Teams { get; set; }
 
